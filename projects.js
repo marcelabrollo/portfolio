@@ -1,4 +1,4 @@
-// projects.js - versão com fetch do activities.json
+// projects.js - dinamycally loads some images to the website
 
 
 let activeLang = navigator.language.slice(0, 2);
