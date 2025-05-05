@@ -79,14 +79,14 @@ function createCarousel(images, activityId) {
   prevBtn.addEventListener("click", () => {
     let index = parseInt(img.dataset.index);
     index = (index - 1 + images.length) % images.length;
-    img.src = `./images/${images[index]}`;
+    img.src = `Images/${images[index]}`;
     img.dataset.index = index;
   });
 
   nextBtn.addEventListener("click", () => {
     let index = parseInt(img.dataset.index);
     index = (index + 1) % images.length;
-    img.src = `./images/${images[index]}`;
+    img.src = `Images/${images[index]}`;
     img.dataset.index = index;
   });
 
