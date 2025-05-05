@@ -437,6 +437,10 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
+.language-selector{
+    margin: 10px;
+}
+
 /* --------------------------------------- */
 /* ----- Work ----- */
 /* --------------------------------------- */
@@ -549,6 +553,12 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
+.about__photo {
+    width: 50vh;
+    margin-right: 55px;
+}
+
+
 .about__photo-container {
     margin-bottom: var(--gutter-normal);
 }
@@ -556,6 +566,7 @@ body:not(.user-is-tabbing) a:focus {
 .about__text {
     flex: 0 0 0 35%;
     margin: 10px;
+    text-align: justify;
 }
 
 .about__photo-container {
@@ -624,6 +635,13 @@ body:not(.user-is-tabbing) a:focus {
     padding: 1rem;
     border-radius: 8px;
     line-height: 1.6;
+    text-align: justify;  
+}
+
+
+
+  .description--short{
+    text-align: justify;
   }
   /* ---------- Botão de expansão ---------- */
   .toggle-description {

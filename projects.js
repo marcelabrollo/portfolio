@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
   style.textContent = `
     .language-selector {
       position: absolute;
-      top: 2rem;
-      right: 2rem;
+      top: 3.4rem;
+      left: 2rem;
       padding: 0.5rem 1rem;
       background-color: var(--pink);
       color: white;
@@ -168,7 +168,7 @@ function renderProjects(data) {
 
 
 const portfolioData = {
-  "Prestige Perfumes e Cosméticos": {
+  "Prestige Parfums et Cosmétiques": {
     "description_br_full": "Durante meu estágio na Prestige Perfumes e Cosméticos, tive a oportunidade de atuar em diversos projetos estratégicos e criativos para marcas como Dolce&Gabbana, Issey Miyake e Narciso Rodriguez.\n\nFui responsável por desenvolver e adaptar materiais promocionais e visuais para o mercado brasileiro, incluindo vitrines e ativações em loja em pontos de venda parceiros. Garanti que cada execução refletisse adequadamente a identidade sofisticada das marcas e estivesse em conformidade com as diretrizes globais, gerenciando todo o processo desde o conceito até a entrega final, em colaboração com gráficas e fornecedores.\n\nTambém desenvolvi páginas de marca para Issey Miyake e Narciso Rodriguez no site da Sephora Brasil, além de otimizar páginas de produto com foco em storytelling envolvente e posicionamento de marca. Realizei benchmarking com execuções internacionais e concorrentes para garantir uma adaptação local eficaz, respeitando sempre a identidade e o tom de cada marca.\n\nApoiei ainda as ações de marketing digital, auxiliando na adaptação e no envio de materiais promocionais para campanhas sazonais e lançamentos. Quando necessário, contribuí com a criação de peças visuais e redação publicitária, além de ser responsável por reportar as ativações às equipes globais.\n\nEssa experiência me proporcionou uma compreensão prática e estratégica do universo do marketing e da comunicação no setor de luxo, integrando branding, visual merchandising e marketing digital em um único ecossistema.\n\nAbaixo, você pode conferir alguns dos materiais que desenvolvi durante esse período.",
     "description_br": "Durante meu estágio na Prestige Perfumes e Cosméticos, atuei no desenvolvimento de vitrines, páginas de marca e materiais promocionais para marcas como Dolce&Gabbana, Issey Miyake e Narciso Rodriguez. Trabalhei na adaptação das campanhas globais para o mercado brasileiro, respeitando os guidelines internacionais e integrando estratégias de branding, visual merchandising e marketing digital no setor de luxo. Confira abaixo alguns dos materiais desenvolvidos durante esse período.",
     "description_en_full": "During my internship at Prestige Perfumes and Cosmetics, I had the opportunity to work on several strategic and creative projects for brands such as Dolce&Gabbana, Issey Miyake, and Narciso Rodriguez.\n\nI was responsible for developing and tailoring promotional and visual materials to the Brazilian market, including window displays and in-store animations at partner retail stores. I ensured each execution properly reflected the brands' sophisticated identity and adhered to global guidelines, managing the entire process from concept to final delivery in collaboration with printers and suppliers.\n\nI also developed brand pages for Issey Miyake and Narciso Rodriguez on Sephora Brazil's website and optimized product pages with compelling storytelling and brand positioning emphasis. Benchmarking against international brand executions and competitors was done to ensure successful local adaptation, always taking into account the unique identity and tone of each brand.\n\nI also supported digital marketing efforts, assisting in tailoring and distributing promotional materials for seasonal and product launch campaigns. As needed, I supported visual asset development and copywriting, and was responsible for reporting campaign activations to the global teams.\n\nThis experience allowed me to develop a practical and strategic understanding of the luxury marketing and communication world, bringing together branding, visual merchandising, and digital marketing within one ecosystem.",
@@ -187,7 +187,7 @@ const portfolioData = {
         ]
       },
       {
-        "name": "Pages de marques et de produits",
+        "name": "Pages de marques",
         "images": [
           "120805.png", "120950.png"
         ]
