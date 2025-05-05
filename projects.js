@@ -1,4 +1,4 @@
-// projects.js - dinamycally loads some images to the website
+// projects.js - dinamycally loads some images to the website necessary to copy activities.json as a static variable
 
 
 let activeLang = navigator.language.slice(0, 2);
