@@ -63,7 +63,7 @@ function createCarousel(images, activityId) {
   container.className = "carousel";
 
   const img = document.createElement("img");
-  img.src = `./images/${images[0]}`;
+  img.src = `./Images/${images[0]}`;
   img.className = "carousel__image";
   img.dataset.index = 0;
   img.id = `carousel-img-${activityId}`;
