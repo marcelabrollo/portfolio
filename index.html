@@ -40,6 +40,48 @@
       </div>
     </section>
 
+    <section class="work">
+      <div class="row">
+        <h2>Créations indépendantes</h2>    
+        <div class="row two-columns">
+          
+          <!-- Coluna da Esquerda: Imagem + Botões -->
+          <div class="extra_carousel">
+            <button class="extra-carousel__button extra-carousel__button--prev" onclick="extraPrevSlide()">←</button>
+
+            <img id="extra-carousel-img" src="extras_images/cuidado2.png" alt="Imagem da campanha" />
+            <p id="extra-carousel-caption" class="caption">Aime-toi en premier. Ta beauté, tes règles.</p>
+
+            <button class="extra-carousel__button extra-carousel__button--next" onclick="extraNextSlide()">→</button>
+          </div>
+
+          <!-- Coluna da Direita: Texto -->
+          <div class="text-column">
+            <h3 class="subtitle">Campagne: <em>Ta beauté, tes règles</em></h3>
+              <div class="beauty-description--full">
+                  <h4>Briefing et Objectif:</h4>
+                  <p>
+                    Créer une campagne de communication qui célèbre la beauté féminine sous toutes ses formes, en valorisant la pluralité des corps, l’estime de soi et la beauté authentique. Le projet devait rompre avec les standards imposés, promouvoir une image plus diverse et libre de jugements, et s’adresser à une audience adulte entre 30 et 40 ans, en quête de représentations plus réalistes et inclusives.
+                  </p>
+                  <h4>Concept proposé:</h4>
+                  <p>
+                   "Ta beauté, tes règles" : une campagne visuelle qui place la personne au centre, avec des messages directs et bienveillants. Chaque visuel valorise un corps réel, une attitude confiante et une liberté assumée. L’esthétique reste douce, inclusive et contemporaine.
+                  </p>
+                  <h4>Résultat:</h4>
+                  <p>
+                    Deux visuels aux couleurs douces mais contrastées, illustrant avec simplicité l'idée d'une beauté plurielle et libérée des standards. Chaque composition met en avant des corps différents, accompagnées de messages clairs, simples et sincères : 
+                    <strong>Ta beauté, tes règles.</strong>
+                  </p>
+            </div>  
+            <div class="beauty-description--short">
+              Campagne développée pour une marque de cosmétiques coréens dans le cadre d’un processus de sélection, avec pour objectif de célébrer la beauté féminine dans toute sa diversité. Pensée pour une audience de 30 à 40 ans, la campagne "Ta beauté, tes règles" valorise l’acceptation de soi, l’authenticité et la pluralité des corps à travers deux visuels aux couleurs douces mais contrastées. Chaque image transmet un message clair et bienveillant : la beauté n’a pas de norme fixe, elle s’exprime librement selon ses propres règles.
+            </div>
+            <button id="beauty-toggle-description" class="btn btn--pink">Voir plus</button>    
+        </div>
+    </section>
+
+
+
     <section class="about" id="about">
       <div class="row">
         <h2>À propos de moi</h2>
@@ -73,8 +115,30 @@
   <a href="#top" class="back-to-top" title="Voltar ao topo">
     <img src="./Images/arrow-up.svg" alt="Voltar ao topo" class="back-to-top__image" />
   </a>
-
+    <script src="extra_carousel.js"></script>
   <script src="projects.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("beauty-toggle-description");
+    const shortDesc = document.querySelector(".beauty-description--short");
+    const fullDesc = document.querySelector(".beauty-description--full");
+
+    if (!toggleBtn || !shortDesc || !fullDesc) return;
+
+    // Começa com a descrição curta visível
+    fullDesc.style.display = "none";
+
+    toggleBtn.addEventListener("click", () => {
+      const isShortVisible = shortDesc.style.display !== "none";
+
+      shortDesc.style.display = isShortVisible ? "none" : "block";
+      fullDesc.style.display = isShortVisible ? "block" : "none";
+
+      toggleBtn.textContent = isShortVisible ? "Voir moins" : "Voir plus";
+    });
+  });
+</script>
+
 </body>
 
 </html>
