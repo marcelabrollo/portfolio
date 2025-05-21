@@ -661,6 +661,20 @@ body:not(.user-is-tabbing) a:focus {
   .beauty-description--short{
     text-align: justify;
   }
+
+ .cbi-description--full {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    line-height: 1.6;
+    text-align: justify;  
+}
+
+
   /* ---------- Botão de expansão ---------- */
   .toggle-description {
     display: inline-block;
@@ -670,6 +684,10 @@ body:not(.user-is-tabbing) a:focus {
   }
 
   #beauty-toggle-description{
+    margin-top: 14px;
+  }
+
+  #cbi-toggle-description{
     margin-top: 14px;
   }
 
@@ -869,3 +887,16 @@ body:not(.user-is-tabbing) a:focus {
     padding-left: 1rem;
     font-family: sans-serif;
 }
+
+
+.two-columns.layout-right {
+  flex-direction: row-reverse;
+}
+
+#carousel-art {
+  width: 70%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
