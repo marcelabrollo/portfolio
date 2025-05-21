@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marcela Brollo | Portfólio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body>
@@ -47,18 +48,18 @@
           
           <!-- Coluna da Esquerda: Imagem + Botões -->
           <div class="extra_carousel">
-            <button class="extra-carousel__button extra-carousel__button--prev" onclick="extraPrevSlide()">←</button>
+            <button class="carousel__button extra-carousel__button extra-carousel__button--prev" onclick="extraPrevSlide()">←</button>
 
-            <img id="extra-carousel-img" src="extras_images/cuidado2.png" alt="Imagem da campanha" />
+            <img class="carousel__image" id="carousel-art-beauty" src="images/campanhas/beleza/cuidado2.png" alt="Imagem da campanha" />
             <p id="extra-carousel-caption" class="caption">Aime-toi en premier. Ta beauté, tes règles.</p>
 
-            <button class="extra-carousel__button extra-carousel__button--next" onclick="extraNextSlide()">→</button>
+            <button class="carousel__button extra-carousel__button extra-carousel__button--next" onclick="extraNextSlide()">→</button>
           </div>
 
           <!-- Coluna da Direita: Texto -->
           <div class="text-column">
             <h3 class="subtitle">Campagne: <em>Ta beauté, tes règles</em></h3>
-              <div class="beauty-description--full">
+              <div class="description--full beauty-description--full">
                   <h4>Briefing et Objectif:</h4>
                   <p>
                     Créer une campagne de communication qui célèbre la beauté féminine sous toutes ses formes, en valorisant la pluralité des corps, l’estime de soi et la beauté authentique. Le projet devait rompre avec les standards imposés, promouvoir une image plus diverse et libre de jugements, et s’adresser à une audience adulte entre 30 et 40 ans, en quête de représentations plus réalistes et inclusives.
@@ -73,7 +74,7 @@
                     <strong>Ta beauté, tes règles.</strong>
                   </p>
             </div>  
-            <div class="beauty-description--short">
+            <div class="description--short beauty-description--short">
               Campagne développée pour une marque de beauté dans le cadre d’un processus de sélection, avec pour objectif de célébrer la beauté féminine dans toute sa diversité. Pensée pour une audience de 30 à 40 ans, la campagne "Ta beauté, tes règles" valorise l’acceptation de soi, l’authenticité et la pluralité des corps à travers deux visuels aux couleurs douces mais contrastées. Chaque image transmet un message clair et bienveillant : la beauté n’a pas de norme fixe, elle s’exprime librement selon ses propres règles.
             </div>
             <button id="beauty-toggle-description" class="btn btn--pink">Voir plus</button>    
@@ -87,9 +88,9 @@
 
       <!-- Coluna da Imagem/Carrossel -->
       <div class="extra_carousel">
-        <button class="extra-carousel__button extra-carousel__button--prev" onclick="extraPrevSlideCBI()">←</button>
+        <button class="carousel__button extra-carousel__button extra-carousel__button--prev" onclick="extraPrevSlideCBI()">←</button>
 
-        <img id="carousel-art" src="extras_images/ART 1.jpg" alt="Imagem do curso CBI Miami" />
+        <img  class="carousel__image" id="carousel-art-cbi" src="images/campanhas/cbi/ART 1.jpg" alt="Imagem do curso CBI Miami" />
         <p id="caption-art" class="caption">
           <strong>Traduction de l’image :</strong><br />
           CBI de Miami – #Formation<br />
@@ -97,14 +98,14 @@
           <em>Découvrez les stratégies essentielles pour l’inclusion scolaire.</em>
         </p>
 
-        <button class="extra-carousel__button extra-carousel__button--next" onclick="extraNextSlideCBI()">→</button>
+        <button class="carousel__button extra-carousel__button extra-carousel__button--next" onclick="extraNextSlideCBI()">→</button>
       </div>
 
       <!-- Coluna do Texto -->
       <div class="text-column">
         <h3 class="subtitle">Campagne: <em>Médiation scolaire & Inclusion</em></h3>
 
-        <div class="cbi-description--full">
+        <div class="description--full cbi-description--full">
           <h4>Briefing et Objectif:</h4>
           <p>
             Créer deux visuels pour les réseaux sociaux mettant en valeur les cours de la CBI of Miami, destinés aux professionnels de l’éducation. L’objectif est de promouvoir la médiation scolaire et les stratégies d’inclusion, en soulignant leur utilité dans le quotidien des enseignants et des familles.
@@ -121,7 +122,7 @@
           </p>
         </div>
 
-        <div class="cbi-description--short">
+        <div class="description--short cbi-description--short">
           J’ai créé ces deux visuels pour la CBI of Miami dans le cadre d’un processus de sélection. Mon objectif était de transmettre, de manière claire et sensible, l’importance de l’inclusion et des stratégies pour accompagner les difficultés dans le cadre scolaire. J’ai choisi une approche visuelle douce et accessible, pensée pour parler aux éducateurs et encourager une pédagogie plus empathique en classe.
         </div>
 
@@ -142,7 +143,7 @@
             <p>Je m'appelle Marcela Brollo, professionnelle du marketing et de la communication avec une expérience dans le luxe, le design et la création visuelle. J'ai travaillé chez Prestige Parfums et Cosmétiques en tant que stagiaire en marketing, et chez INVITRO en tant que Directrice Artistique stagiaire et trainee. Aujourd’hui, je poursuis un Master en Management du Luxe et du Design à l’ICN Business School à Paris, avec l’objectif de développer mes compétences stratégiques et créatives pour le secteur du luxe.</p>
             <a href="https://www.linkedin.com/in/marcela-brollo/" class="btn" target="_blank">Voir LinkedIn</a>
           </div>
-          <img class="about__photo" src="./Images/marcela.jpg" alt="Marcela Brollo" />
+          <img class="about__photo" src="./images/jobs/marcela.jpg" alt="Marcela Brollo" />
         </div>
       </div>
     </section>
@@ -165,31 +166,11 @@
   </footer>
 
   <a href="#top" class="back-to-top" title="Voltar ao topo">
-    <img src="./Images/arrow-up.svg" alt="Voltar ao topo" class="back-to-top__image" />
+    <img src="./images/jobs/arrow-up.svg" alt="Voltar ao topo" class="back-to-top__image" />
   </a>
-    <script src="extra_carousel.js"></script>
-  <script src="projects.js"></script>
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggleBtn = document.getElementById("beauty-toggle-description");
-    const shortDesc = document.querySelector(".beauty-description--short");
-    const fullDesc = document.querySelector(".beauty-description--full");
-
-    if (!toggleBtn || !shortDesc || !fullDesc) return;
-
-    // Começa com a descrição curta visível
-    fullDesc.style.display = "none";
-
-    toggleBtn.addEventListener("click", () => {
-      const isShortVisible = shortDesc.style.display !== "none";
-
-      shortDesc.style.display = isShortVisible ? "none" : "block";
-      fullDesc.style.display = isShortVisible ? "block" : "none";
-
-      toggleBtn.textContent = isShortVisible ? "Voir moins" : "Voir plus";
-    });
-  });
-</script>
+  <script src="js/projects.js"></script>
+  <script src="js/campanha_cbi.js"></script>
+  <script src="js/campanha_beleza.js"></script>
 
 </body>
 

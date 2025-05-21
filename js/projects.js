@@ -1,5 +1,6 @@
-// projects.js - dinamycally loads some images to the website necessary to copy activities.json as a static variable
-
+// ----------------------
+// Idioma ativo e seletor
+// ----------------------
 
 let activeLang = navigator.language.slice(0, 2);
 const supportedLangs = ['fr'];
@@ -11,29 +12,24 @@ const languageLabels = {
   fr: { showMore: 'Voir plus', showLess: 'Voir moins' },
 };
 
+function createLanguageSelector() {
+  const languageSelector = document.createElement('select');
+  languageSelector.id = 'language-selector';
+  languageSelector.className = 'language-selector';
 
+  supportedLangs.forEach((lang) => {
+    const option = document.createElement('option');
+    option.value = lang;
+    option.textContent = lang.toUpperCase();
+    if (lang === activeLang) option.selected = true;
+    languageSelector.appendChild(option);
+  });
 
-const languageSelector = document.createElement('select');
-languageSelector.id = 'language-selector';
-languageSelector.className = 'language-selector';
-supportedLangs.forEach((lang) => {
-  const option = document.createElement('option');
-  option.value = lang;
-  option.textContent = lang.toUpperCase();
-  if (lang === activeLang) option.selected = true;
-  languageSelector.appendChild(option);
-});
-
-document.addEventListener('DOMContentLoaded', () => {
+  // Inserir na navegação
   const nav = document.querySelector('.nav');
   if (nav) nav.parentElement.insertBefore(languageSelector, nav);
 
-  languageSelector.addEventListener('change', (e) => {
-    activeLang = e.target.value;
-    renderProjects(portfolioData);
-  });
-
-  // Estilo básico do seletor via JS (caso não esteja no CSS)
+  // Estilo (caso não tenha no CSS)
   const style = document.createElement('style');
   style.textContent = `
     .language-selector {
@@ -54,16 +50,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   `;
   document.head.appendChild(style);
-});
 
+  languageSelector.addEventListener('change', (e) => {
+    activeLang = e.target.value;
+    renderProjects(portfolioData);
+  });
+}
 
+// ----------------------
+// Criação do carrossel
+// ----------------------
 
 function createCarousel(images, activityId) {
   const container = document.createElement("div");
   container.className = "carousel";
 
   const img = document.createElement("img");
-  img.src = `Images/${images[0]}`;
+  img.src = `images/jobs/${images[0]}`; // Corrigido
   img.className = "carousel__image";
   img.dataset.index = 0;
   img.id = `carousel-img-${activityId}`;
@@ -79,14 +82,14 @@ function createCarousel(images, activityId) {
   prevBtn.addEventListener("click", () => {
     let index = parseInt(img.dataset.index);
     index = (index - 1 + images.length) % images.length;
-    img.src = `Images/${images[index]}`;
+    img.src = `images/jobs/${images[index]}`;
     img.dataset.index = index;
   });
 
   nextBtn.addEventListener("click", () => {
     let index = parseInt(img.dataset.index);
     index = (index + 1) % images.length;
-    img.src = `Images/${images[index]}`;
+    img.src = `images/jobs/${images[index]}`;
     img.dataset.index = index;
   });
 
@@ -97,6 +100,10 @@ function createCarousel(images, activityId) {
   return container;
 }
 
+// ----------------------
+// Renderização dos projetos
+// ----------------------
+
 function renderProjects(data) {
   const container = document.querySelector(".work__boxes");
   container.innerHTML = "";
@@ -104,9 +111,6 @@ function renderProjects(data) {
   Object.entries(data).forEach(([companyKey, company], i) => {
     const box = document.createElement("div");
     box.className = "work__box";
-    box.style.display = "flex";
-    box.style.flexDirection = "column";
-    box.style.gap = "3rem";
 
     const text = document.createElement("div");
     text.className = "work__text";
@@ -129,6 +133,7 @@ function renderProjects(data) {
     const toggleBtn = document.createElement("button");
     toggleBtn.textContent = languageLabels[activeLang].showMore;
     toggleBtn.className = "btn btn--pink toggle-description";
+
     toggleBtn.addEventListener("click", () => {
       const showing = full.style.display === "block";
       full.style.display = showing ? "none" : "block";
@@ -161,61 +166,11 @@ function renderProjects(data) {
     container.appendChild(box);
   });
 }
-document.addEventListener("DOMContentLoaded", () => {
-  const imgCBI = document.getElementById("carousel-art");
-  const captionCBI = document.getElementById("caption-art");
-
-  if (imgCBI && captionCBI) {
-    let currentIndexCBI = 1;
-    const totalSlidesCBI = 2;
-
-    const captionsCBI = {
-  1: `Traduction de l’image:<br>CBI de Miami – #Formation<br><strong>Médiation scolaire et inclusion</strong><br><em>Découvrez les stratégies essentielles pour l’inclusion scolaire.</em>`,
-  2: `Traduction de l’image:<br>CBI de Miami – #Formation<br><strong>Médiation scolaire et inclusion</strong><br><em>Apprenez à identifier les troubles d’apprentissage.</em>`
-};
-
-    const imageFilesCBI = {
-      1: "ART 1.jpg",
-      2: "ART 2.jpg"
-    };
-
-    function updateCBISlide() {
-      imgCBI.src = `extras_images/${imageFilesCBI[currentIndexCBI]}`;
-      captionCBI.innerHTML = captionsCBI[currentIndexCBI] || "";
-    }
-
-    window.extraNextSlideCBI = function () {
-      currentIndexCBI = (currentIndexCBI % totalSlidesCBI) + 1;
-      updateCBISlide();
-    };
-
-    window.extraPrevSlideCBI = function () {
-      currentIndexCBI = (currentIndexCBI - 2 + totalSlidesCBI) % totalSlidesCBI + 1;
-      updateCBISlide();
-    };
-
-    updateCBISlide();
-  }
-});
 
 
-// Toggle "Voir plus" da CBI
-const toggleCBI = document.getElementById("cbi-toggle-description");
-const shortCBI = document.querySelector(".cbi-description--short");
-const fullCBI = document.querySelector(".cbi-description--full");
-
-if (toggleCBI && shortCBI && fullCBI) {
-  fullCBI.style.display = "none";
-
-  toggleCBI.addEventListener("click", () => {
-    const isShortVisible = shortCBI.style.display !== "none";
-    shortCBI.style.display = isShortVisible ? "none" : "block";
-    fullCBI.style.display = isShortVisible ? "block" : "none";
-    toggleCBI.textContent = isShortVisible ? "Voir moins" : "Voir plus";
-  });
-}
-
-
+// ----------------------
+// Inicialização
+// ----------------------
 
 
 const portfolioData = {
@@ -252,5 +207,7 @@ const portfolioData = {
     ]
   }
 };
-
-renderProjects(portfolioData);
+document.addEventListener("DOMContentLoaded", () => {
+  createLanguageSelector();
+  renderProjects(portfolioData);
+});
