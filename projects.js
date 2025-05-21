@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const captionsCBI = {
   1: `Traduction de l’image:<br>CBI de Miami – #Formation<br><strong>Médiation scolaire et inclusion</strong><br><em>Découvrez les stratégies essentielles pour l’inclusion scolaire.</em>`,
-  2: `Traduction de l’image:<br>CBI de Miami – #Formation<br><strong>Médiation scolaire et inclusion</strong><br><em>Apprenez à identifier les troubles d’apprentissage avec une approche pratique et humaine.</em>`
+  2: `Traduction de l’image:<br>CBI de Miami – #Formation<br><strong>Médiation scolaire et inclusion</strong><br><em>Apprenez à identifier les troubles d’apprentissage.</em>`
 };
 
     const imageFilesCBI = {

@@ -896,6 +896,7 @@ body:not(.user-is-tabbing) a:focus {
 #carousel-art {
   width: 70%;
   max-width: 400px;
+  height: 70%;
   margin: 0 auto;
 }
 
