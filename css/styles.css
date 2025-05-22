@@ -908,13 +908,7 @@ p, .work__text p {
   .text-column {
     text-align: center;
   }
-
-  .projet-adite {
-  gap: 2rem !important;       /* Reduz o espaçamento entre imagem e texto */
-  align-items: flex-start !important;  /* Garante alinhamento no topo */
 }
-
-
 .two-columns.layout-right {
   flex-direction: row-reverse;
 }
