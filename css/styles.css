@@ -673,6 +673,10 @@ body:not(.user-is-tabbing) a:focus {
   background-clip: content-box;
 }
 
+.text-column p {
+  text-align: justify;
+}
+
 
 /* ---------- Botão de expansão ---------- */
 .toggle-description {
@@ -776,7 +780,44 @@ body:not(.user-is-tabbing) a:focus {
   text-align: center;
 }
 
+.terapia_carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+}
 
+.terapia_carousel img {
+  width: 70%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.terapia-carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--pink);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.terapia-carousel__button--prev {
+  left: 0;
+}
+
+.terapia-carousel__button--next {
+  right: 0;
+}
 
 /* ---------- Two Columns ---------- */
 .two-columns {
@@ -812,3 +853,6 @@ body:not(.user-is-tabbing) a:focus {
 .two-columns.layout-right {
   flex-direction: row-reverse;
 }
+
+
+

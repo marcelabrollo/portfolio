@@ -84,6 +84,9 @@
 
  <section class="work">
   <div class="row">
+
+
+    <!-- Adicionando campnha meditacao -->
     <div class="row two-columns layout-right">
 
       <!-- Coluna da Imagem/Carrossel -->
@@ -129,9 +132,44 @@
          <button id="cbi-toggle-description" class="btn btn--pink">Voir plus</button>
         </div>
       </div>
+    </div><!-- row -->
   </section>
 
 
+<section class="work">
+  <div class="row">
+    <!-- Campanha Terapia -->
+    <div class="row two-columns layout-left">
+
+      <!-- Coluna da Imagem / Carrossel -->
+      <div class="extra_carousel">
+        <button class="carousel__button terapia-carousel__button terapia-carousel__button--prev" onclick="extraPrevSlideTERAPIA()">←</button>
+
+        <img class="carousel__image" id="carousel-art-terapia" src="images/campanhas/terapia/5.jpg" alt="Imagem terapia" />
+
+        <p id="caption-art-terapia" class="caption">
+          <!-- Legenda dinâmica via JS -->
+        </p>
+
+        <button class="carousel__button terapia-carousel__button terapia-carousel__button--next" onclick="extraNextSlideTERAPIA()">→</button>
+      </div>
+
+      <!-- Coluna do Texto -->
+      <div class="text-column">
+        <h3 class="subtitle">Campagne : <em>Thérapie pour la Gen Z</em></h3>
+
+        <p>
+          Création de stories pour un compte de thérapie destiné à la Génération Z, axé sur l’éducation émotionnelle et le développement des compétences comportementales. En adoptant un langage jeune et bienveillant, j’ai développé des contenus visuels et animés abordant divers sujets. L’objectif était de rendre des thèmes complexes plus accessibles, à travers des conseils pratiques, un design coloré et organique, et un format pensé pour favoriser l’engagement sur Instagram Stories tout en créant un lien avec cette génération.
+        </p>
+
+        <p>
+        <strong>Thèmes abordés:</strong> connaissance de soi, communication assertive, créativité, intelligence émotionnelle, négociation, empathie, estime de soi, planification personnelle et écoute active.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 
@@ -171,7 +209,7 @@
   <script src="js/projects.js"></script>
   <script src="js/campanha_cbi.js"></script>
   <script src="js/campanha_beleza.js"></script>
-
+  <script src="js/terapia.js"></script>
 </body>
 
 </html>
