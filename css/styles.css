@@ -677,6 +677,9 @@ body:not(.user-is-tabbing) a:focus {
   text-align: justify;
 }
 
+p, .work__text p {
+  text-align: justify;
+}
 
 /* ---------- Botão de expansão ---------- */
 .toggle-description {
@@ -755,7 +758,7 @@ body:not(.user-is-tabbing) a:focus {
   margin-top: 10px;
   font-style: italic;
   color: #ccc;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 
@@ -765,12 +768,27 @@ body:not(.user-is-tabbing) a:focus {
   z-index: 2;
 }
 
+
 .extra_carousel .extra-carousel__button--prev {
   left: 0;
 }
 
 .extra_carousel .extra-carousel__button--next {
   right: 0;
+}
+
+.tcc-carousel__button {
+  position: absolute;
+  top: 40%;
+  z-index: 2;
+}
+
+.extra_carousel .tcc-carousel__button--prev {
+  left: -2.3vw;
+}
+
+.extra_carousel .tcc-carousel__button--next {
+  right: -2.4vw;
 }
 
 .extra_carousel {
@@ -819,6 +837,48 @@ body:not(.user-is-tabbing) a:focus {
   right: 0;
 }
 
+.extra_carousel.tcc_carousel {
+  display: relative;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: row;
+  margin: 2rem;
+}
+
+.carousel__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel__image {
+  max-width: 87%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.caption {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 0.8rem;
+  font-style: italic;
+  color: #ccc;
+}
+
+.tcc-carousel__button {
+  top: 40%;
+  font-size: 1.5rem;            /* Tamanho menor da seta */
+}
+
+#carousel-art-tcc{
+    width: 90%;
+}
+
+.tcc-carousel__button:hover {
+  background-color: #e0215d;
+}
+
 /* ---------- Two Columns ---------- */
 .two-columns {
   display: flex;
@@ -848,11 +908,36 @@ body:not(.user-is-tabbing) a:focus {
   .text-column {
     text-align: center;
   }
+
+  .projet-adite {
+  gap: 2rem !important;       /* Reduz o espaçamento entre imagem e texto */
+  align-items: flex-start !important;  /* Garante alinhamento no topo */
 }
+
 
 .two-columns.layout-right {
   flex-direction: row-reverse;
 }
 
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .two-columns {
+    flex-direction: column;
+  }
+}
+.work__image-box {
+  flex: 1 1 50%;
+}
+
+.work__text {
+  flex: 1 1 45%;
+}
 
 

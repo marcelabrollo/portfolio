@@ -75,7 +75,7 @@
                   </p>
             </div>  
             <div class="description--short beauty-description--short">
-              Campagne développée pour une marque de beauté dans le cadre d’un processus de sélection, avec pour objectif de célébrer la beauté féminine dans toute sa diversité. Pensée pour une audience de 30 à 40 ans, la campagne "Ta beauté, tes règles" valorise l’acceptation de soi, l’authenticité et la pluralité des corps à travers deux visuels aux couleurs douces mais contrastées. Chaque image transmet un message clair et bienveillant : la beauté n’a pas de norme fixe, elle s’exprime librement selon ses propres règles.
+              Campagne développée pour une marque de beauté dans le cadre d’un processus de sélection, avec pour objectif de célébrer la beauté féminine dans toute sa diversité. Pensée pour une audience de 30 à 40 ans, la campagne "Ta beauté, tes règles" valorise l’acceptation de soi, l’authenticité et la pluralité des corps à travers deux visuels aux couleurs douces mais contrastées. Chaque image transmet un message clair: la beauté n’a pas de norme fixe, elle s’exprime librement selon ses propres règles.
             </div>
             <button id="beauty-toggle-description" class="btn btn--pink">Voir plus</button>    
             </div>
@@ -156,7 +156,7 @@
 
       <!-- Coluna do Texto -->
       <div class="text-column">
-        <h3 class="subtitle">Campagne : <em>Thérapie pour la Gen Z</em></h3>
+        <h3 class="subtitle">Campagne: <em>Thérapie pour la Gen Z</em></h3>
 
         <p>
           Création de stories pour un compte de thérapie destiné à la Génération Z, axé sur l’éducation émotionnelle et le développement des compétences comportementales. En adoptant un langage jeune et bienveillant, j’ai développé des contenus visuels et animés abordant divers sujets. L’objectif était de rendre des thèmes complexes plus accessibles, à travers des conseils pratiques, un design coloré et organique, et un format pensé pour favoriser l’engagement sur Instagram Stories tout en créant un lien avec cette génération.
@@ -171,6 +171,37 @@
   </div>
 </section>
 
+
+  <main role="main">
+  <section class="work" id="projects">
+    <div class="row">
+      <h2>Projets académiques</h2>
+
+      <div class="row two-columns layout-left">
+        <!-- Coluna da Imagem com rolagem -->
+         <div class="extra_carousel">
+          <button class="carousel__button tcc-carousel__button tcc-carousel__button--prev" onclick="extraPrevSlideTCC()">←</button>
+
+          <img class="carousel__image" id="carousel-art-tcc" src="images/projetos academicos/tcc/1.jpg" alt="Projet TCC" />
+          <p id="caption-art-tcc" class="caption">
+            Campagnes “Habille ce futur” et “Tu peux le porter” – Réseaux sociaux, plateforme virtuelle et branding B2B.
+          </p>
+
+          <button class="carousel__button tcc-carousel__button tcc-carousel__button--next" onclick="extraNextSlideTCC()">→</button>
+        </div>
+
+
+        <!-- Coluna do Texto -->
+        <div class="text-column">
+          <div style="margin-left: 2rem;">
+          <h3 class="subtitle">Projet de fin d'études (ESPM)</h3>
+             <p>
+              <strong>Adite est mon projet de fin d’études:</strong> une marque-concept qui combine cabine d’essayage virtuelle et dressing numérique pour améliorer l’expérience d’achat.</p>
+              <p>J’ai conçu l’identité visuelle et les campagnes à destination du marché B2B, avec un focus sur l’innovation, l’inclusion et la personnalisation. Le projet permettait aux clients de visualiser le tombé des vêtements sur leur corps avant l’achat et de stocker leurs looks dans un dressing connecté aux sites partenaires.</p>
+            </div>
+          </div>
+</section>
+</main>
 
 
     <section class="about" id="about">
@@ -210,6 +241,33 @@
   <script src="js/campanha_cbi.js"></script>
   <script src="js/campanha_beleza.js"></script>
   <script src="js/terapia.js"></script>
+  <script src="js/tcc.js"></script>
+  <script src="js/motion.js"></script>
+  <script>
+  let currentVideoIndex = 0;
+  const videos = document.querySelectorAll(".video-frame");
+
+  function showVideo(index) {
+    videos.forEach((video, i) => {
+      video.style.display = i === index ? "block" : "none";
+    });
+  }
+
+  function nextVideo() {
+    currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+    showVideo(currentVideoIndex);
+  }
+
+  function prevVideo() {
+    currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+    showVideo(currentVideoIndex);
+  }
+
+  // Inicializa
+  document.addEventListener("DOMContentLoaded", () => showVideo(currentVideoIndex));
+</script>
+
+
 </body>
 
 </html>
