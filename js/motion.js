@@ -1,25 +1,27 @@
-<script>
-  let currentVideoIndex = 0;
+let currentVideoIndex = 0;
 
-  const wrapper = document.getElementById("video-carousel-wrapper");
-  const videos = wrapper.querySelectorAll("..motion-video-frame");
+const videoWrapper = document.getElementById("video-carousel-wrapper");
+const videoFrames = videoWrapper.querySelectorAll(".motion-video-frame");
 
-  function updateVideoCarousel() {
-    const offset = -currentVideoIndex * 100;
-    wrapper.style.transform = `translateX(${offset}%)`;
-  }
-
-  function nextVideo() {
-    if (currentVideoIndex < videos.length - 1) {
-      currentVideoIndex++;
-      updateVideoCarousel();
+function showVideo(index) {
+  videoFrames.forEach((frame, i) => {
+    frame.classList.remove("active");
+    if (i === index) {
+      frame.classList.add("active");
     }
-  }
+  });
+}
 
-  function prevVideo() {
-    if (currentVideoIndex > 0) {
-      currentVideoIndex--;
-      updateVideoCarousel();
-    }
-  }
-</script>
+function nextVideo() {
+  currentVideoIndex = (currentVideoIndex + 1) % videoFrames.length;
+  showVideo(currentVideoIndex);
+}
+
+function prevVideo() {
+  currentVideoIndex = (currentVideoIndex - 1 + videoFrames.length) % videoFrames.length;
+  showVideo(currentVideoIndex);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  showVideo(currentVideoIndex);
+});

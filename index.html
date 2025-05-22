@@ -200,7 +200,37 @@
               <p>J’ai conçu l’identité visuelle et les campagnes à destination du marché B2B, avec un focus sur l’innovation, l’inclusion et la personnalisation. Le projet permettait aux clients de visualiser le tombé des vêtements sur leur corps avant l’achat et de stocker leurs looks dans un dressing connecté aux sites partenaires.</p>
             </div>
           </div>
+            </section>
 
+          <section class="work">
+            <div class="row two-columns layout-right">
+              <!-- Coluna do Texto -->
+              <div class="work__text motion-carousel-text">
+                <h3 class="subtitle">Motion Graphics</h3>
+                <p>
+                  Création de vignette animée pour la chaîne fictive <strong>Entretenimundo</strong>, développée dans le cadre d’un projet universitaire. Le projet comprenait des jingles pour différentes émissions :
+                </p>
+                <ul class="work__list">
+                  <li><strong>Quizzone</strong> – quiz interactif via Kahoot</li>
+                  <li><strong>It’s Game Time</strong> – gameplays en direct</li>
+                </ul>
+                <p>
+                  L’objectif était de simuler une programmation de chaîne numérique sur Twitch, axée sur la dynamique et l’interactivité.
+                </p>
+              </div>
+              <!-- Coluna do Carrossel de Vídeos -->
+              <div class="motion-carousel-video">
+                <button class="motion-carousel-button prev" onclick="prevVideo()">←</button>
+
+                <div class="motion-video-wrapper" id="video-carousel-wrapper">
+                  <iframe class="motion-video-frame active" src="https://www.youtube.com/embed/x0CTGynkqkg" title="Vidéo 1" allowfullscreen></iframe>
+                  <iframe class="motion-video-frame" src="https://www.youtube.com/embed/Rbx0nPJ9Ft0" title="Vidéo 2" allowfullscreen></iframe>
+                  <iframe class="motion-video-frame" src="https://www.youtube.com/embed/PXadOpIR98E" title="Vidéo 3" allowfullscreen></iframe>
+                </div>
+                <button class="motion-carousel-button next" onclick="nextVideo()">→</button>
+              </div>
+            </div>
+          </section>
 </main>
 
 
@@ -243,30 +273,6 @@
   <script src="js/terapia.js"></script>
   <script src="js/tcc.js"></script>
   <script src="js/motion.js"></script>
-  <script>
-  let currentVideoIndex = 0;
-  const videos = document.querySelectorAll(".video-frame");
-
-  function showVideo(index) {
-    videos.forEach((video, i) => {
-      video.style.display = i === index ? "block" : "none";
-    });
-  }
-
-  function nextVideo() {
-    currentVideoIndex = (currentVideoIndex + 1) % videos.length;
-    showVideo(currentVideoIndex);
-  }
-
-  function prevVideo() {
-    currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
-    showVideo(currentVideoIndex);
-  }
-
-  // Inicializa
-  document.addEventListener("DOMContentLoaded", () => showVideo(currentVideoIndex));
-</script>
-
 
 </body>
 
