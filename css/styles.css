@@ -420,6 +420,14 @@ body:not(.user-is-tabbing) a:focus {
     font-size: var(--font-size-normal);
 }
 
+@media (max-width: 768px) {
+  .header {
+    background-attachment: scroll; /* Evita bugs em mobile */
+    background-size: cover;       /* Garante que cubra toda a tela */
+    background-position: left;     /* Ajusta a posição se necessário */
+  }
+}
+
 .header__text {
     position: absolute;
     top: 50%;
@@ -441,6 +449,34 @@ body:not(.user-is-tabbing) a:focus {
     .header__text p {
         transform: scale(.8);
     }
+}
+
+/* Esconde os dois por padrão */
+.header-text-desktop,
+.header-text-mobile {
+  display: none;
+  margin: 1.5rem 0 3.5rem;
+  font-family: 'Jost', sans-serif;
+  font-size: var(--font-size-medium);
+  max-width: var(--container-medium-width);
+}
+
+/* Mostra o desktop acima de 501px */
+@media (min-width: 501px) {
+  .header-text-desktop {
+    display: block;
+    text-align: left; /* ou justify */
+  }
+}
+
+/* Mostra o mobile abaixo de 500px */
+@media (max-width: 500px) {
+  .header-text-mobile {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem; /* menor se quiser */
+    line-height: 1.5;
+  }
 }
 
 .language-selector{
