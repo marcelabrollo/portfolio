@@ -1038,3 +1038,60 @@ x
 }
 
 
+/* Ajustes para mobile até 600px */
+@media (max-width: 600px) {
+
+  /* ↓↓↓ Reduz tamanho das setas no geral */
+  .carousel__button,
+  .tcc-carousel__button,
+  .extra-carousel__button,
+  .motion-carousel-button {
+    font-size: 1.4rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* ↓↓↓ Reposiciona as setas nas campanhas para não ficarem sobre a imagem */
+  .extra-carousel__button, {
+    top: 90%; /* coloca as setas abaixo da imagem */
+    transform: translateY(-50%);
+    position: absolute;
+  }
+
+  #carousel-art-tcc {
+    width: 82% !important;
+  }
+
+  /* ↓↓↓ Coloca as setas do motion mais para o canto (se ainda quiser ao lado) */
+  .motion-carousel-button.prev {
+    left: 10px;
+  }
+
+  .motion-carousel-button.next {
+    right: 10px;
+  }
+
+  /* ↓↓↓ Ajusta altura do vídeo do Motion no mobile */
+  .motion-video-frame {
+    height: 240px;
+  }
+
+  /* ↓↓↓ Evita que o vídeo ultrapasse a tela */
+  .motion-video-wrapper {
+    max-width: 38%;
+    padding: 0;
+  }
+}
+  .motion-carousel-button{   
+   top: 50%; /* coloca as setas abaixo da imagem */
+    transform: translateY(-50%);
+    position: absolute;
+  }
+
+  .tcc-carousel__button{
+     top: 45%; /* coloca as setas abaixo da imagem */
+    transform: translateY(-50%);
+    position: absolute;
+  }
+
+}
+
