@@ -208,6 +208,5 @@ const portfolioData = {
   }
 };
 document.addEventListener("DOMContentLoaded", () => {
-  createLanguageSelector();
   renderProjects(portfolioData);
 });
